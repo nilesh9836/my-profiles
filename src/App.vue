@@ -16,7 +16,7 @@
 
       <v-tooltip bottom>
       <template v-slot:activator="{ on }">
-          <v-btn v-on="on">
+          <v-btn v-on="on" @click="redirectToHomePage()">
             <v-icon >mdi-home</v-icon>
           </v-btn>
 
@@ -25,7 +25,7 @@
       </v-tooltip>
       <v-tooltip bottom>
       <template v-slot:activator="{ on }">
-          <v-btn v-on="on">
+          <v-btn v-on="on" @click="redirectToAboutPage()">
             <v-icon >mdi-account</v-icon>
           </v-btn>
 
@@ -34,7 +34,7 @@
       </v-tooltip>
       <v-tooltip bottom>
       <template v-slot:activator="{ on }">
-          <v-btn v-on="on">
+          <v-btn v-on="on" @click="redirectToContactPage()">
             <v-icon >mdi-contacts</v-icon>
           </v-btn>
 
@@ -58,7 +58,18 @@ export default {
 
   data: () => ({
     //
-  })
+  }),
+  methods: {
+    redirectToAboutPage () {
+      this.$router.push({ path: 'about' })
+    },
+    redirectToHomePage () {
+      this.$router.push({ path: 'home' })
+    },
+    redirectToContactPage () {
+      this.$router.push({ path: 'contact' })
+    }
+  }
 }
 </script>
 <style scoped>

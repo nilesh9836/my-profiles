@@ -1,9 +1,11 @@
 <template>
-  <v-container class="pa-0 ma-0" fluid>
+  <v-container class="pa-0 ma-0 pa-4" fluid>
     <v-row no-gutters class="pa-0 ma-0">
       <v-col>
       <v-card
     class="mx-auto"
+    outlined
+    elevation="0"
   >
     <v-card-text>
       <div>Speed Up Communication</div>
@@ -23,36 +25,22 @@
         @click="redirectToAboutPage()"
       >
         Hire Me
-      </v-btn>
-    </v-card-actions>
 
-    <v-expand-transition>
-      <v-card
-        v-if="reveal"
-        class="transition-fast-in-fast-out v-card--reveal"
-        style="height: 100%;"
-      >
-        <v-card-text class="pb-0">
-          <p class="text-h4 text--primary">
-            Origin
-          </p>
-          <p>late 16th century (as a noun denoting a place where alms were distributed): from medieval Latin eleemosynarius, from late Latin eleemosyna ‘alms’, from Greek eleēmosunē ‘compassion’ </p>
-        </v-card-text>
-        <v-card-actions class="pt-0">
-          <v-btn
-            text
-            color="teal accent-4"
-            @click="reveal = false"
-          >
-            Close
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-expand-transition>
+      </v-btn>
+      <v-icon color="teal accent-4" small @click="redirectToAboutPage()">mdi-arrow-right</v-icon>
+      <v-spacer></v-spacer>
+      <v-row class="pl-9 ml-9">
+      <v-icon>mdi-twitter</v-icon>
+      <v-icon class="px-2">mdi-facebook</v-icon>
+      <v-icon>mdi-instagram</v-icon>
+      <v-icon class="pl-2">mdi-github</v-icon>
+      <v-icon class="pl-2">mdi-linkedin</v-icon>
+    </v-row>
+    </v-card-actions>
   </v-card>
       </v-col>
       <v-col>
-      <v-card>
+      <v-card elevation="0" outlined>
       <img
       src="img/icons/nilesh-logo.jpg"
       alt="image"
@@ -70,7 +58,7 @@ export default {
   }),
   methods: {
     redirectToAboutPage () {
-      console.log('hi')
+      this.$router.push({ path: 'about' })
     }
   }
 }
