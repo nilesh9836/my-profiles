@@ -1,91 +1,63 @@
 <template>
-  <v-container>
-    <v-row class="text-center">
-      <v-col cols="12">
-        <v-img
-          :src="require('../assets/logo.svg')"
-          class="my-3"
-          contain
-          height="200"
-        />
-      </v-col>
-
-      <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to Vuetify
-        </h1>
-
-        <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
-          <a
-            href="https://community.vuetifyjs.com"
-            target="_blank"
-          >Discord Community</a>
-        </p>
-      </v-col>
-
-      <v-col
-        class="mb-5"
-        cols="12"
+  <v-container class="pa-0 ma-0" fluid>
+    <v-row no-gutters class="pa-0 ma-0">
+      <v-col>
+      <v-card
+    class="mx-auto"
+  >
+    <v-card-text>
+      <div>Speed Up Communication</div>
+      <p class="text-h4 text--primary">
+        Hi i'm  Nilesh <br>Mishra
+      </p>
+      <p>adjective</p>
+      <div class="text--primary">
+        NM studio is the place for everything related to<br>
+        a project,to-do list and communication.
+      </div>
+    </v-card-text>
+    <v-card-actions>
+      <v-btn
+        text
+        color="teal accent-4"
+        @click="redirectToAboutPage()"
       >
-        <h2 class="headline font-weight-bold mb-3">
-          What's next?
-        </h2>
+        Hire Me
+      </v-btn>
+    </v-card-actions>
 
-        <v-row justify="center">
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ next.text }}
-          </a>
-        </v-row>
-      </v-col>
-
-      <v-col
-        class="mb-5"
-        cols="12"
+    <v-expand-transition>
+      <v-card
+        v-if="reveal"
+        class="transition-fast-in-fast-out v-card--reveal"
+        style="height: 100%;"
       >
-        <h2 class="headline font-weight-bold mb-3">
-          Important Links
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
+        <v-card-text class="pb-0">
+          <p class="text-h4 text--primary">
+            Origin
+          </p>
+          <p>late 16th century (as a noun denoting a place where alms were distributed): from medieval Latin eleemosynarius, from late Latin eleemosyna ‘alms’, from Greek eleēmosunē ‘compassion’ </p>
+        </v-card-text>
+        <v-card-actions class="pt-0">
+          <v-btn
+            text
+            color="teal accent-4"
+            @click="reveal = false"
           >
-            {{ link.text }}
-          </a>
-        </v-row>
+            Close
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-expand-transition>
+  </v-card>
       </v-col>
-
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Ecosystem
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
-        </v-row>
+      <v-col>
+      <v-card>
+      <img
+      src="img/icons/nilesh-logo.jpg"
+      alt="image"
+      min-width="400"/>
+      </v-card>
       </v-col>
     </v-row>
   </v-container>
@@ -94,58 +66,12 @@
 <script>
 export default {
   name: 'HelloWorld',
-
   data: () => ({
-    ecosystem: [
-      {
-        text: 'vuetify-loader',
-        href: 'https://github.com/vuetifyjs/vuetify-loader'
-      },
-      {
-        text: 'github',
-        href: 'https://github.com/vuetifyjs/vuetify'
-      },
-      {
-        text: 'awesome-vuetify',
-        href: 'https://github.com/vuetifyjs/awesome-vuetify'
-      }
-    ],
-    importantLinks: [
-      {
-        text: 'Documentation',
-        href: 'https://vuetifyjs.com'
-      },
-      {
-        text: 'Chat',
-        href: 'https://community.vuetifyjs.com'
-      },
-      {
-        text: 'Made with Vuetify',
-        href: 'https://madewithvuejs.com/vuetify'
-      },
-      {
-        text: 'Twitter',
-        href: 'https://twitter.com/vuetifyjs'
-      },
-      {
-        text: 'Articles',
-        href: 'https://medium.com/vuetify'
-      }
-    ],
-    whatsNext: [
-      {
-        text: 'Explore components',
-        href: 'https://vuetifyjs.com/components/api-explorer'
-      },
-      {
-        text: 'Select a layout',
-        href: 'https://vuetifyjs.com/getting-started/pre-made-layouts'
-      },
-      {
-        text: 'Frequently Asked Questions',
-        href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions'
-      }
-    ]
-  })
+  }),
+  methods: {
+    redirectToAboutPage () {
+      console.log('hi')  
+    }
+  }
 }
 </script>
