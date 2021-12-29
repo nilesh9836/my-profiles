@@ -70,7 +70,7 @@ export default {
   }),
   methods: {
     redirectToAboutPage () {
-      console.log('hi')  
+      console.log('hi')
     }
   }
 }
