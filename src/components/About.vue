@@ -2,7 +2,7 @@
   <div class="about pa-4">
     <v-card outlined elevation="0" min-height="700" >
       <v-card-text class="pa-6 about">
-        I’m Nilesh, but people call me “Mithu” I’m a frontend developer,
+        I’m Nilesh, I’m a frontend developer,
         and I specialize in efficient Vue apps and CSS & HTML that just work across
         all platforms and browsers. I care deeply about building interfaces that are
         usable and pleasant for the most number of people possible.

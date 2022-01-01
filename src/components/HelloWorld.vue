@@ -19,6 +19,8 @@
       </div>
     </v-card-text>
     <v-card-actions>
+      <v-row no-gutters>
+      <v-col>
       <v-btn
         text
         color="teal accent-4"
@@ -28,21 +30,43 @@
 
       </v-btn>
       <v-icon color="teal accent-4" small @click="redirectToAboutPage()">mdi-arrow-right</v-icon>
+      </v-col>
       <v-spacer></v-spacer>
+      <v-col class="pt-4">
       <v-row class="pl-9 ml-9">
+      <a :href="`https://twitter.com/home`" style="color: #FFFFFF;
+    text-decoration: none;">
       <v-icon>mdi-twitter</v-icon>
-      <v-icon class="px-2">mdi-facebook</v-icon>
-      <v-icon>mdi-instagram</v-icon>
+      </a>
+      <a :href="`https://www.instagram.com/nilesh______mishra/`" style="color: #FFFFFF;
+    text-decoration: none;">
+      <v-icon class="pl-1">mdi-instagram</v-icon>
+      </a>
+      <a :href="`https://github.com/nilesh9836`" style="color: #FFFFFF;
+    text-decoration: none;">
       <v-icon class="pl-2">mdi-github</v-icon>
+      </a>
+      <a :href="`https://www.linkedin.com/feed/`" style="color: #FFFFFF;
+    text-decoration: none;">
       <v-icon class="pl-2">mdi-linkedin</v-icon>
+      </a>
     </v-row>
+     </v-col>
+      </v-row>
     </v-card-actions>
   </v-card>
       </v-col>
       <v-col>
-      <v-card elevation="0" outlined>
+      <v-card elevation="0"  outlined color="transparent" class="pl-6">
+        <div class="pt-9">
+        <div class="git-style">10+ git projects</div>
+        <div class="contribution-style">Contributions (Open Source) :-</div>
+        <li class="list-style">Vuetify</li>
+        <li class="list-style">Iview</li>
+        </div>
       <img
-      src="img/icons/nilesh-logo.jpg"
+      class="mt-n13 pl-9"
+      src="img/icons/nilesh-logo.png"
       alt="image"
       min-width="400"/>
       </v-card>
@@ -63,3 +87,20 @@ export default {
   }
 }
 </script>
+<style scoped>
+.git-style {
+  color: brown;
+  font-size: 18px;
+  font-weight: 500;
+}
+.contribution-style {
+  color: rebeccapurple;
+  font-size: 18px;
+  font-weight: 400;
+}
+.list-style {
+  color: #a5a8ad;
+  font-size: 18px;
+  font-weight: 300;
+}
+</style>
