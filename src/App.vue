@@ -34,6 +34,15 @@
       </v-tooltip>
       <v-tooltip bottom>
       <template v-slot:activator="{ on }">
+          <v-btn v-on="on" @click="redirectToProjectPage()">
+            <v-icon >mdi-github</v-icon>
+          </v-btn>
+
+        </template>
+        <span>My Projects</span>
+      </v-tooltip>
+      <v-tooltip bottom>
+      <template v-slot:activator="{ on }">
           <v-btn v-on="on" @click="redirectToContactPage()">
             <v-icon >mdi-contacts</v-icon>
           </v-btn>
@@ -68,6 +77,9 @@ export default {
     },
     redirectToContactPage () {
       this.$router.push({ path: 'contact' })
+    },
+    redirectToProjectPage () {
+      this.$router.push({ path: 'project' })
     }
   }
 }
