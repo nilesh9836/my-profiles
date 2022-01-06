@@ -1,6 +1,6 @@
 <template>
   <div class="about pa-4">
-    <v-card outlined elevation="0" min-height="700" >
+    <v-card  elevation="0" min-height="700" >
       <v-card-text class="pa-6 about">
           <v-row class="justify-center">
               <v-form ref="form"
